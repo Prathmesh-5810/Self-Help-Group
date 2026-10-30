@@ -1,0 +1,7 @@
+{
+  "name": "SHG Decision Support System",
+  "description": "Offline-first Self-Help Group Decision Support System for financial management, loan tracking, savings, and micro-enterprise growth.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+

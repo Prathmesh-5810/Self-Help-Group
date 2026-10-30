@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SHG Decision Support System</title>
+    <meta name="description" content="Offline-first Self-Help Group Decision Support System for financial management, loan tracking, savings, and micro-enterprise growth." />
+    <meta property="og:title" content="SHG Decision Support System" />
+    <meta property="og:description" content="Offline-first Self-Help Group Decision Support System for financial management, loan tracking, savings, and micro-enterprise growth." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <!-- App Shell Container -->
+    <div id="app-shell" class="app-shell">
+      
+      <!-- Off-canvas mobile scrim -->
+      <div id="sidebar-scrim" class="sidebar-scrim" data-action="toggle-sidebar" aria-hidden="true"></div>
+
+      <!-- Fixed Indigo Sidebar -->
+      <aside id="sidebar" class="sidebar" aria-label="Main Navigation">
+        <!-- Brand Lockup -->
+        <div class="sidebar-brand">
+          <div class="brand-medallion" aria-hidden="true">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+            </svg>
+          </div>
+          <div class="brand-text-wrap">
+            <span class="brand-title">SHG</span>
+            <span class="brand-subtitle">Decision Support System</span>
+          </div>
+          <button class="mobile-close-btn" data-action="toggle-sidebar" aria-label="Close navigation">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
+          </button>
+        </div>
+
+        <!-- 9 Navigation Items -->
+        <nav class="sidebar-nav" role="navigation">
+          <!-- Sliding active glass nav pill indicator (FLIP animated) -->
+          <div id="nav-active-pill" class="nav-active-pill" aria-hidden="true"></div>
+
+          <a href="#/dashboard" class="nav-item" data-route="dashboard" id="nav-dashboard">
+            <span class="nav-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="3" width="7" height="9" rx="1"/><rect x="14" y="3" width="7" height="5" rx="1"/><rect x="14" y="12" width="7" height="9" rx="1"/><rect x="3" y="16" width="7" height="5" rx="1"/>
+              </svg>
+            </span>
+            <span class="nav-label">Dashboard</span>
+          </a>
+
+          <a href="#/members" class="nav-item" data-route="members" id="nav-members">
+            <span class="nav-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+              </svg>
+            </span>
+            <span class="nav-label">Members</span>
+          </a>
+
+          <a href="#/savings" class="nav-item" data-route="savings" id="nav-savings">
+            <span class="nav-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M19 5c-1.5 0-2.8 1.4-3 2-3.5-1.5-11-.3-11 5 0 1.8 0 3 2 4.5V20h4v-2h3v2h4v-4c1-.5 1.7-1 2-1.8.4-.9.2-2.2-.5-3.2.7-1 .8-2.6-.5-3.5-.4-.3-1-.5-1.5-.5z"/><circle cx="16" cy="11" r="1"/>
+              </svg>
+            </span>
+            <span class="nav-label">Savings</span>
+          </a>
+
+          <a href="#/loans" class="nav-item" data-route="loans" id="nav-loans">
+            <span class="nav-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"/><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"/><path d="M12 6v2m0 8v2"/>
+              </svg>
+            </span>
+            <span class="nav-label">Loans</span>
+          </a>
+
+          <a href="#/income-expenses" class="nav-item" data-route="income-expenses" id="nav-income-expenses">
+            <span class="nav-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M7 10v12"/><path d="M17 14v-12"/><path d="m3 14 4-4 4 4"/><path d="m21 10-4 4-4-4"/>
+              </svg>
+            </span>
+            <span class="nav-label">Income &amp; Expenses</span>
+          </a>
+
+          <a href="#/products" class="nav-item" data-route="products" id="nav-products">
+            <span class="nav-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m7.5 4.27 9 5.15"/><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/>
+              </svg>
+            </span>
+            <span class="nav-label">Products</span>
+          </a>
+
+          <a href="#/sales" class="nav-item" data-route="sales" id="nav-sales">
+            <span class="nav-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/>
+              </svg>
+            </span>
+            <span class="nav-label">Sales</span>
+          </a>
+
+          <a href="#/reports" class="nav-item" data-route="reports" id="nav-reports">
+            <span class="nav-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/>
+              </svg>
+            </span>
+            <span class="nav-label">Reports</span>
+          </a>
+
+          <a href="#/settings" class="nav-item" data-route="settings" id="nav-settings">
+            <span class="nav-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+              </svg>
+            </span>
+            <span class="nav-label">Settings</span>
+          </a>
+        </nav>
+
+        <!-- Bottom Illustration & Wave Footer -->
+        <div class="sidebar-footer">
+          <div class="sidebar-art-wrap">
+            <!-- 3 Women with Leaf Motifs Vector Illustration -->
+            <svg class="women-illustration" viewBox="0 0 220 120" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Self Help Group Women Together">
+              <defs>
+                <linearGradient id="sareeGrad1" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stop-color="#FF9F43"/>
+                  <stop offset="100%" stop-color="#EE5253"/>
+                </linearGradient>
+                <linearGradient id="sareeGrad2" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stop-color="#10AC84"/>
+                  <stop offset="100%" stop-color="#1DD1A1"/>
+                </linearGradient>
+                <linearGradient id="sareeGrad3" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stop-color="#F368E0"/>
+                  <stop offset="100%" stop-color="#833471"/>
+                </linearGradient>
+                <linearGradient id="leafGrad" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#55E6C1" stop-opacity="0.8"/>
+                  <stop offset="100%" stop-color="#10AC84" stop-opacity="0.2"/>
+                </linearGradient>
+              </defs>
+              <!-- Ambient leaves background -->
+              <path d="M10 80C10 50 35 45 45 45C45 65 30 90 10 80Z" fill="url(#leafGrad)"/>
+              <path d="M210 75C210 45 185 40 175 40C175 60 190 85 210 75Z" fill="url(#leafGrad)"/>
+              <path d="M90 20C100 5 120 5 130 20C118 24 102 24 90 20Z" fill="url(#leafGrad)"/>
+
+              <!-- Woman 1 (Left) -->
+              <circle cx="65" cy="45" r="14" fill="#F8C291"/>
+              <path d="M52 42C52 30 78 30 78 42C78 35 73 30 65 30C57 30 52 35 52 42Z" fill="#2C2C54"/>
+              <circle cx="68" cy="43" r="1.5" fill="#C0392B"/> <!-- Bindi -->
+              <path d="M50 62C50 56 80 56 80 62L85 105H45L50 62Z" fill="url(#sareeGrad1)"/>
+              <path d="M50 62L75 88L65 105" stroke="#F1C40F" stroke-width="2"/> <!-- Saree Pallu -->
+
+              <!-- Woman 2 (Center - Leader holding Ledger/Tablet) -->
+              <circle cx="110" cy="38" r="15" fill="#FAD390"/>
+              <path d="M96 35C96 22 124 22 124 35C124 26 118 22 110 22C102 22 96 26 96 35Z" fill="#130F40"/>
+              <circle cx="110" cy="36" r="1.8" fill="#C0392B"/>
+              <path d="M92 57C92 50 128 50 128 57L134 105H86L92 57Z" fill="url(#sareeGrad2)"/>
+              <path d="M95 62L122 88L112 105" stroke="#FFFFFF" stroke-opacity="0.8" stroke-width="2"/>
+              <!-- Ledger held -->
+              <rect x="100" y="70" width="20" height="25" rx="3" fill="#FFFFFF" stroke="#2C2C54" stroke-width="1.5"/>
+              <line x1="104" y1="76" x2="116" y2="76" stroke="#10AC84" stroke-width="1.5"/>
+              <line x1="104" y1="81" x2="114" y2="81" stroke="#2C2C54" stroke-width="1.5"/>
+              <line x1="104" y1="86" x2="112" y2="86" stroke="#2C2C54" stroke-width="1.5"/>
+
+              <!-- Woman 3 (Right) -->
+              <circle cx="155" cy="45" r="14" fill="#F8C291"/>
+              <path d="M142 42C142 30 168 30 168 42C168 35 163 30 155 30C147 30 142 35 142 42Z" fill="#2C2C54"/>
+              <circle cx="152" cy="43" r="1.5" fill="#C0392B"/>
+              <path d="M140 62C140 56 170 56 170 62L175 105H135L140 62Z" fill="url(#sareeGrad3)"/>
+              <path d="M165 62L145 88L155 105" stroke="#F1C40F" stroke-width="2"/>
+            </svg>
+            <div class="sidebar-art-caption">“Empowering Women, Transforming Communities”</div>
+          </div>
+
+          <!-- Bottom Wave SVG -->
+          <div class="sidebar-wave" aria-hidden="true">
+            <svg viewBox="0 0 267 36" fill="none" preserveAspectRatio="none" style="width: 100%; height: 36px;">
+              <path d="M0 12C60 26 120 0 180 14C220 23 250 16 267 10V36H0V12Z" fill="rgba(255, 255, 255, 0.08)"/>
+              <path d="M0 20C50 32 130 10 190 22C230 30 255 24 267 18V36H0V20Z" fill="rgba(255, 255, 255, 0.06)"/>
+            </svg>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Main Workspace Wrapper -->
+      <div class="main-wrapper">
+        
+        <!-- Sticky Topbar -->
+        <header class="topbar">
+          <div class="topbar-left">
+            <button class="icon-btn hamburger-btn" data-action="toggle-sidebar" aria-label="Toggle navigation menu">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+            </button>
+            <div class="breadcrumbs" id="topbar-breadcrumbs">
+              <span class="crumb-root">Pragati Mahila SHG</span>
+              <span class="crumb-separator" aria-hidden="true">/</span>
+              <span class="crumb-current" id="crumb-current">Dashboard</span>
+            </div>
+          </div>
+
+          <!-- Pill Search Bar with Live Filter -->
+          <div class="topbar-search">
+            <div class="search-input-wrap">
+              <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+              <input type="text" id="global-search-input" class="global-search-input" placeholder="Search members, loans, products... (/)" autocomplete="off" />
+              <kbd class="search-kbd">/</kbd>
+            </div>
+          </div>
+
+          <!-- Right Action Controls -->
+          <div class="topbar-right">
+            <!-- Global Month Selector -->
+            <div class="month-selector-wrap">
+              <svg class="month-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              <select id="global-month-select" class="month-select" aria-label="Select Accounting Month" data-action="change-month">
+                <option value="2025-04">April 2025</option>
+                <option value="2025-03">March 2025</option>
+                <option value="2025-02">February 2025</option>
+                <option value="2025-01">January 2025</option>
+              </select>
+            </div>
+
+            <!-- Bell Notification with Unread Badge & Popover -->
+            <div class="popover-anchor">
+              <button class="icon-btn bell-btn" id="bell-btn" data-action="toggle-notifications" aria-label="Notifications" aria-expanded="false">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+                <span class="bell-badge" id="bell-badge">3</span>
+              </button>
+
+              <!-- Notification Popover Panel -->
+              <div class="popover-panel notification-popover" id="notification-popover" hidden>
+                <div class="popover-header">
+                  <h4 class="popover-title">Group Alerts &amp; Schedules</h4>
+                  <button class="text-link-btn" data-action="mark-all-notifications-read">Mark all read</button>
+                </div>
+                <div class="notification-list" id="notification-list">
+                  <!-- Populated by JS -->
+                </div>
+              </div>
+            </div>
+
+            <!-- Admin Profile Avatar & Menu -->
+            <div class="popover-anchor">
+              <button class="admin-profile-btn" id="admin-menu-btn" data-action="toggle-admin-menu" aria-label="User Profile Menu" aria-expanded="false">
+                <div class="avatar-circle">AS</div>
+                <div class="admin-meta">
+                  <span class="admin-name">Anjali S.</span>
+                  <span class="admin-role">President</span>
+                </div>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+              </button>
+
+              <!-- Admin Dropdown Menu -->
+              <div class="popover-panel admin-menu-popover" id="admin-menu-popover" hidden>
+                <div class="admin-menu-user-card">
+                  <div class="user-big-avatar">AS</div>
+                  <div class="user-big-info">
+                    <strong>Anjali Sharma</strong>
+                    <span>Ward 12, Sri Sairam Cluster</span>
+                    <span class="badge-role">SHG Leader</span>
+                  </div>
+                </div>
+                <div class="menu-divider"></div>
+                <button class="menu-item" data-action="navigate" data-target="settings">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+                  <span>SHG Configuration</span>
+                </button>
+                <button class="menu-item" data-action="toggle-theme">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+                  <span id="theme-toggle-label">Toggle Dark Theme</span>
+                </button>
+                <button class="menu-item" data-action="export-json-backup">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                  <span>Export JSON Backup</span>
+                </button>
+                <div class="menu-divider"></div>
+                <button class="menu-item text-danger" data-action="open-reset-confirm">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="1 4 1 10 7 10"/><polyline points="23 20 23 14 17 14"/><path d="M20.49 9A9 9 0 0 0 5.64 5.64L1 10m22 4l-4.64 4.36A9 9 0 0 1 3.51 15"/></svg>
+                  <span>Reset to Seed Data</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </header>
+
+        <!-- Live Global Search Modal Overlay -->
+        <div id="search-modal" class="search-modal-backdrop" data-action="close-search-modal" style="display: none;" hidden>
+          <div class="search-modal-card" role="dialog" aria-modal="true" aria-label="Global Search" onclick="event.stopPropagation()">
+            <div class="search-modal-header">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+              <input type="text" id="modal-search-input" class="modal-search-input" placeholder="Search members, loans, savings, products, sales... (Esc to close)" />
+              <button class="icon-btn close-search-btn" data-action="close-search-modal" aria-label="Close search (Esc)">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+              </button>
+            </div>
+            <div class="search-modal-results" id="search-modal-results">
+              <!-- Instantly populated with recommendations or search results -->
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Dynamic Page View Container -->
+        <main id="app-root" class="app-content" tabindex="-1">
+          <!-- Views injected by router -->
+        </main>
+      </div>
+
+    </div>
+
+    <!-- Global Accessible Modal Container -->
+    <div id="modal-container" class="modal-container"></div>
+
+    <!-- Global Accessible Toast Region -->
+    <div id="toast-container" class="toast-container" aria-live="polite" aria-atomic="true"></div>
+
+    <!-- Single Module-Free Vanilla Application Entry Point -->
+    <script src="./app.js"></script>
+  </body>
+</html>
